@@ -1,0 +1,131 @@
+:root {
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --main-heading-stats: hsl(0, 0%, 100%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+  font-size: 0.9735rem;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  max-width: 90rem;
+  background-color: var(--main-background);
+  color: #fff;
+  margin: 0 auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 64.1875rem;
+  margin: 8rem auto;
+  background-color: var(--card-background);
+}
+
+.header__content {
+  max-width: 23.625rem;
+  margin: auto;
+  padding: 4rem;
+}
+
+.header__title {
+  font-size: 2rem;
+}
+
+.header__text {
+  line-height: 1.5rem;
+  color: var(--main-paragraph);
+  margin-bottom: 3rem;
+}
+
+.stats__number {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.stats__name {
+  color: var(--main-paragraph);
+  padding-top: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+}
+.header__styled {
+  color: var(--accent);
+}
+
+.header__img {
+  background: url("./images/image-header-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.header__img::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--accent);
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.stats {
+  font-size: 1.2rem;
+  max-width: 20rem;
+  display: flex;
+  justify-content: space-between;
+}
+.stats__name {
+  letter-spacing: 0.1rem;
+}
+.stats__name,
+.stats__number {
+  flex: 1;
+  display: block;
+}
+
+@media screen and (max-width: 59.375rem) {
+  body {
+    min-width: 23.4375rem;
+  }
+
+  .grid-container {
+    margin-top: 5rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 20rem;
+    grid-template-rows: 15rem 2fr;
+    grid-template-areas: "img" "text";
+    justify-content: center;
+    max-width: 20rem;
+  }
+
+  .header__img {
+    background-image: url("./images/image-header-mobile.jpg");
+    background-repeat: no-repeat;
+    grid-area: img;
+  }
+
+  .header__content {
+    grid-area: text;
+    text-align: center;
+    padding: 1rem;
+  }
+  .header__text {
+    margin-bottom: 2rem;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .stats__item {
+    margin-bottom: 1.5rem;
+  }
+}
