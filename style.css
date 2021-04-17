@@ -15,6 +15,7 @@ body {
   background-color: var(--main-background);
   color: #fff;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 .grid-container {
@@ -96,6 +97,8 @@ body {
 
   .grid-container {
     margin-top: 5rem;
+    border-radius: 1rem;
+    overflow: hidden;
   }
 
   .grid-container {
@@ -104,11 +107,13 @@ body {
     grid-template-areas: "img" "text";
     justify-content: center;
     max-width: 20rem;
+    margin: 4rem auto 0 auto;
   }
 
   .header__img {
     background-image: url("./images/image-header-mobile.jpg");
     background-repeat: no-repeat;
+    mix-blend-mode: multiply;
     grid-area: img;
   }
 
@@ -127,5 +132,11 @@ body {
 
   .stats__item {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 25rem) {
+  .grid-container {
+    margin: 4rem 0 0 0;
   }
 }
