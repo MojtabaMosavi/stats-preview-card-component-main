@@ -113,7 +113,6 @@ body {
   .header__img {
     background-image: url("./images/image-header-mobile.jpg");
     background-repeat: no-repeat;
-    mix-blend-mode: multiply;
     grid-area: img;
   }
 
